@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        h1 {
+            color: #1A64D6;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 40px;
+            
+            
+        }
+        h2 {
+            text-align: center;
+            
+            
+             }
+             
+            
+        ul {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            padding: 0;
+            font-size: larger;
+            
+        }
+        li {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        button {
+            font-size: larger;
+            color: white;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px 30px 20px 30px;
+            border-color: #1A64D6;
+            border-radius: 30px 30px 30px 30px;
+            background-color: #1A64D6 
+            
+            
+            
+            
+        }
+        button:hover {
+            cursor: pointer;
+            background: white;
+            transition: 200ms ease-in-out;
+            
+            
+            
+        }
+
+        p{
+            text-align: center;
+        }
+        .rainy:hover{
+            background: #FAFDD6;
+            
+            
+        }
+        .cloudy:hover {
+            background: #FAFDD6;
+        }
+        .sunny:hover {
+            background: #FAFDD6;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        &#9925
+        <br> <strong>Currently 21° in Tokyo</strong>
+        
+    </h1>
+    <h2>
+        13° / 
+        <strong>
+            23°
+        </strong>
+    </h2>
+    <ul>
+        <li class="rainy">
+            <h3>
+                &#127783;&#65039; Tomorrow
+            </h3>
+            <p>
+                10° / 22°
+            </p>
+        </li>
+        <li class="cloudy">
+            <h3>
+                &#127780;&#65039; Saturday
+            </h3>
+            <p>
+                15° / 17°
+            </p>
+        </li>
+        <li class="sunny">
+            <h4>
+                &#9728;&#65039 Sunday
+            </h4>
+            <p>
+                25° / 28°
+            </p>
+        </li>
+    </ul>
+    <button>
+        Change City
+    </button>
+    <p>
+        Coded by Rosemond Bosompem
+    </p>
+
+    <Script>
+        function changeCity() {
+            let city = prompt("What city do you live in?")
+            let temperature = prompt("What temperature is it?")
+            let heading = document.querySelector("h1")
+            
+
+            if (temperature >= 12) {
+heading.innerHTML = "😀<br>Currently " + temperature + "°C" + " in " + city;
+            }
+            else {
+                heading.innerHTML = "😌<br>Currently " + temperature + "°C" + " in  " + city;
+            }
+        }
+        let cityButton = document.querySelector("button")
+        cityButton = addEventListener("click", changeCity)
+    </Script>
+</body>
+</html>
